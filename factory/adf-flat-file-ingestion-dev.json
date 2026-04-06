@@ -1,0 +1,9 @@
+{
+	"name": "adf-flat-file-ingestion-dev",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7b462804-69a1-4970-8f07-2a1e029d94f8",
+		"tenantId": "86a25666-904e-4d07-81e7-660bfb3ae9d2"
+	}
+}
