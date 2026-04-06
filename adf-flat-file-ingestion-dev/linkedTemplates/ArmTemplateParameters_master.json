@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-flat-file-ingestion-dev"
+		},
+		"ls_adls_ingestion_accountKey": {
+			"value": ""
+		},
+		"ls_postgres_ingestion_password": {
+			"value": ""
+		},
+		"ls_adls_ingestion_properties_typeProperties_url": {
+			"value": "https://stphdplatdevcin01.dfs.core.windows.net/"
+		},
+		"ls_postgres_ingestion_properties_typeProperties_server": {
+			"value": "psql-phani-deplatform-dev-cin-01.postgres.database.azure.com"
+		},
+		"ls_postgres_ingestion_properties_typeProperties_database": {
+			"value": "postgres"
+		},
+		"ls_postgres_ingestion_properties_typeProperties_username": {
+			"value": "adminuser"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
