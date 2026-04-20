@@ -1,0 +1,12 @@
+{
+	"name": "ds_postgres_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_postgres_dev",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": []
+	}
+}
