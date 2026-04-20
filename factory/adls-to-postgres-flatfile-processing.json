@@ -1,0 +1,9 @@
+{
+	"name": "adls-to-postgres-flatfile-processing",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bd2e93bd-a0fd-4dec-8bf7-30366a78be19",
+		"tenantId": "86a25666-904e-4d07-81e7-660bfb3ae9d2"
+	}
+}
