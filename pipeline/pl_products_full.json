@@ -45,12 +45,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/phaneendra.mahankali8@gmail.com/fap/nb_products_to_stg",
-					"baseParameters": {
-						"adls_path": "abfss://source@stphdplatdevcin01.dfs.core.windows.net/country/country.csv",
-						"target_table": "stg_country",
-						"load_mode": "overwrite"
-					}
+					"notebookPath": "/Users/phaneendra.mahankali8@gmail.com/fap/nb_products_to_stg"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_databricks_dev",
