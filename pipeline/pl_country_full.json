@@ -17,11 +17,11 @@
 					},
 					"waitOnCompletion": true,
 					"parameters": {
-						"p_pipeline_name": "\"pl_country_full\"",
-						"p_load_type": "\"FULL\"",
+						"p_pipeline_name": "pl_country_full",
+						"p_load_type": "FULL",
+						"p_status": "START",
 						"p_records": "0",
-						"p_error_message": "\"\"",
-						"p_dataset_name": "\"country\""
+						"p_dataset_name": "country"
 					}
 				}
 			},
@@ -79,9 +79,9 @@
 					},
 					"waitOnCompletion": true,
 					"parameters": {
-						"p_dataset_name": "\"country\"",
-						"p_table_name": "\"stg_country\"",
-						"p_key_column": "\"country\""
+						"p_dataset_name": "country",
+						"p_table_name": "stg_country",
+						"p_key_column": "country"
 					}
 				}
 			},
@@ -134,11 +134,11 @@
 					},
 					"waitOnCompletion": true,
 					"parameters": {
-						"p_pipeline_name": "\"pl_country_full\"",
-						"p_load_type": "\"FULL\"",
+						"p_pipeline_name": "pl_country_full",
+						"p_load_type": "FULL",
+						"p_status": "SUCCESS",
 						"p_records": "124",
-						"p_error_message": "\"\"",
-						"p_dataset_name": "\"country\""
+						"p_dataset_name": "country"
 					}
 				}
 			},
@@ -168,7 +168,7 @@
 							"value": "@pipeline().RunId",
 							"type": "Expression"
 						},
-						"p_pipeline_name": "\"pl_country_full\"",
+						"p_pipeline_name": "pl_country_full",
 						"p_activity_name": {
 							"value": "@activity('act_stg_country').name",
 							"type": "Expression"
@@ -253,6 +253,36 @@
 							"value": "@activity('act_scd2_country').error.message",
 							"type": "Expression"
 						}
+					}
+				}
+			},
+			{
+				"name": "act_run_fail",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "act_scd2_country",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_run_tracking",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"p_pipeline_name": "pl_country_full",
+						"p_load_type": "FULL",
+						"p_status": "FAILED",
+						"p_records": "124",
+						"p_dataset_name": "country"
 					}
 				}
 			}
